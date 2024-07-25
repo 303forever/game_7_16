@@ -5,8 +5,8 @@ int main()
 	int  g = 0;
 	int m, n,x,y,boom;
 	unsigned int t = time(NULL);
-	srand(66779940);
-	printf("本次生成地雷的种子是：%u\n", &t);
+	srand(t);
+	printf("本次生成地雷的种子是：%u\n", t);
 	printf("*******玩家请输入：   （输入1开始游戏，输入0结束游戏）\n");
 	scanf("%d", &g);
 	switch (g)

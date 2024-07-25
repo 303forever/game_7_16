@@ -64,7 +64,7 @@ int cal(int** board, char** com, int m, int n, int a, int b)
 			}
 			if (com[a][b] == '0')
 				com[a][b] = ' ';
-			if (com[a][b] == ' ' && a > 0 && a <= m && b > 0 && b <= n)
+			if (com[a][b] == ' ')
 			{
 				cal(board, com, m, n, a + 1, b);
 				cal(board, com, m, n, a - 1, b);
@@ -130,4 +130,5 @@ void game(int** board,char** com, int m, int n,int boom)
 			break;
 		}
 	}
+	return;
 }

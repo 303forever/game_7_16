@@ -74,7 +74,7 @@ int cal(int** board, char** com, int m, int n, int a, int b)
 			return 0;
 		}
 	}
-	else return;
+	else return 0;
 }
 int win(char** com, int m,int n)
 {
@@ -119,7 +119,7 @@ void game(int** board,char** com, int m, int n,int boom)
 		con=player(board,com,m,n);
 		display(com, m, n);
 		winer = win(com, m, n);
-		if (con == 0)
+		if (con == 1)
 		{
 			printf("踩中地雷了，游戏失败。\n");
 			break;
@@ -127,6 +127,7 @@ void game(int** board,char** com, int m, int n,int boom)
 		else if (winer == boom)
 		{
 			printf("已清除全部地雷，玩家获胜。\n");
+			break;
 		}
 	}
 }
